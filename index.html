@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Vinicius Moura Barros</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Tailwind gray-900 para fundo escuro */
+            color: #e2e8f0; /* Tailwind gray-200 para texto claro */
+        }
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #e2e8f0; /* Cor clara para o hambúrguer no modo escuro */
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #2d3748; /* Tailwind gray-800 para fundo do menu móvel */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 1rem 0;
+                border-top: 1px solid #4a5568; /* Tailwind gray-700 */
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .nav-links li {
+                text-align: center;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Cabeçalho Fixo -->
+    <header class="header-fixed bg-gray-800 shadow-lg py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center md:flex-row">
+            <a href="#" class="text-3xl font-extrabold text-blue-400">Vinicius Moura Barros</a>
+            
+            <!-- Menu Hambúrguer (Mobile) -->
+            <div class="hamburger-menu md:hidden" id="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Menu de Navegação (Desktop e Mobile) -->
+            <nav class="nav-links md:flex md:space-x-8" id="nav-menu">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-lg">
+                    <li><a href="#about" class="text-gray-200 hover:text-blue-400 font-medium transition duration-300">Sobre Mim</a></li>
+                    <li><a href="#specialties" class="text-gray-200 hover:text-blue-400 font-medium transition duration-300">Especialidades</a></li>
+                    <li><a href="#portfolio" class="text-gray-200 hover:text-blue-400 font-medium transition duration-300">Portfólio</a></li>
+                    <li><a href="#testimonials" class="text-gray-200 hover:text-blue-400 font-medium transition duration-300">Depoimentos</a></li>
+                    <li><a href="#contact" class="text-gray-200 hover:text-blue-400 font-medium transition duration-300">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Herói -->
+    <section class="bg-gradient-to-r from-blue-800 to-cyan-700 text-white py-24 md:py-36 min-h-screen flex items-center justify-center text-center rounded-b-3xl shadow-2xl mt-16 md:mt-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8">
+                Estudante de Análise e Desenvolvimento de Sistemas <br class="hidden md:block">
+                <span class="text-blue-300">| Python & Java Developer |</span><br class="hidden md:block">
+                Apaixonado por dados e tecnologia | Em constante aprendizado
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-90">
+                Construindo soluções robustas e inovadoras com foco em eficiência e experiência do usuário.
+            </p>
+            <a href="#contact" class="bg-white text-blue-700 hover:bg-blue-100 px-10 py-5 rounded-full font-bold text-xl transition duration-300 transform hover:scale-105 inline-block shadow-lg">
+                Vamos Conversar!
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="py-20 md:py-32 bg-gray-900">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <!-- Imagem movida para aqui, acima do título "Sobre Mim" -->
+            <div class="w-80 h-80 shadow-lg mx-auto mb-10 border-4 border-blue-600" style="background-image: url('minha imagem.jpg'); background-size: cover; background-position: center;">
+            </div>
+            <h2 class="text-4xl font-extrabold text-gray-100 mb-10">Sobre Mim</h2>
+            <div class="flex flex-col items-center justify-center">
+                <div>
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-300 mb-6">
+                        Sou um estudante dedicado de Análise e Desenvolvimento de Sistemas, com uma paixão ardente por desvendar os mistérios dos dados e criar tecnologias que realmente fazem a diferença.
+                    </p>
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-300 mb-6">
+                        Minhas principais habilidades incluem o desenvolvimento robusto em <span class="font-semibold text-blue-400">Python</span> e <span class="font-semibold text-blue-400">Java</span>, onde busco sempre as melhores práticas de codificação e arquitetura. Tenho um forte interesse em <span class="font-semibold text-blue-400">análise de dados</span>, utilizando ferramentas e técnicas para extrair insights valiosos e impulsionar decisões estratégicas.
+                    </p>
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-300">
+                        Estou sempre em busca de novos desafios e oportunidades para expandir meu conhecimento e aplicar minhas habilidades em projetos inovadores.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Especialidades/Serviços -->
+    <section id="specialties" class="py-20 md:py-32 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-100 mb-12">Minhas Especialidades</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-2xl mx-auto">
+                <!-- Card 1: Aplicações em Python -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-blue-400 mb-6">
+                        <i class="fab fa-python text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-100 mb-4">Aplicações Python</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Desenvolvimento de scripts, automações e aplicações complexas em Python para diversas finalidades.
+                    </p>
+                </div>
+                <!-- Card 2: Análise de Dados -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-blue-400 mb-6">
+                        <i class="fas fa-chart-line text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-100 mb-4">Análise de Dados</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Extração, transformação e análise de dados para gerar insights e apoiar a tomada de decisões.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Portfólio/Projetos -->
+    <section id="portfolio" class="py-20 md:py-32 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-100 mb-12">Meus Projetos Recentes</h2>
+            <!-- Container onde os projetos do GitHub serão inseridos -->
+            <div id="github-projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <p class="text-gray-300 col-span-full">Carregando projetos do GitHub...</p>
+            </div>
+            <div class="mt-16">
+                <a id="github-profile-link" href="https://github.com/Viniciusmbbr" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block shadow-lg">
+                    Ver Todos os Projetos no GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos/Provas Sociais -->
+    <section id="testimonials" class="bg-gradient-to-r from-blue-700 to-cyan-600 py-20 md:py-32 text-white">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-4xl font-extrabold mb-12">O que dizem sobre meu trabalho</h2>
+            <div class="bg-blue-800 p-10 rounded-2xl shadow-xl border border-blue-600">
+                <blockquote class="italic text-lg md:text-xl leading-relaxed mb-6">
+                    "Fiquei muito impressionado com a capacidade de aprendizado e a proatividade de Vinicius. Sua dedicação em resolver problemas e entregar soluções de qualidade é notável. Um talento promissor!"
+                </blockquote>
+                <div class="font-semibold text-blue-300 text-lg">
+                    — Professor(a) / Mentor(a) na Universidade
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="py-20 md:py-32 bg-gray-900">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-4xl font-extrabold text-gray-100 mb-12">Entre em Contato</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Se você tem um projeto em mente ou gostaria de conversar, sinta-se à vontade para me enviar uma mensagem.
+            </p>
+            <form class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 mb-12">
+                <div class="mb-6">
+                    <input type="text" placeholder="Seu Nome" class="w-full px-5 py-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 text-gray-100" required>
+                </div>
+                <div class="mb-6">
+                    <input type="email" placeholder="Seu E-mail" class="w-full px-5 py-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 text-gray-100" required>
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="Sua Mensagem" rows="6" class="w-full px-5 py-3 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 text-gray-100"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">
+                    Enviar Mensagem
+                </button>
+            </form>
+
+            <div class="flex justify-center space-x-8 text-3xl">
+                <a href="https://github.com/Viniciusmbbr" target="_blank" class="text-gray-300 hover:text-blue-400 transition duration-300" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vinicius-moura-5a4137327" target="_blank" class="text-gray-300 hover:text-blue-400 transition duration-300" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:seuemail@example.com" class="text-gray-300 hover:text-blue-400 transition duration-300" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-950 text-gray-400 py-10 mt-16 rounded-t-3xl shadow-inner">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Vinicius Moura Barros. Todos os direitos reservados.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-8 mt-6 text-sm">
+                <a href="#" class="hover:text-blue-200 transition duration-300">Política de Privacidade</a>
+                <a href="#" class="hover:text-blue-200 transition duration-300">Termos de Uso</a>
+                <a href="https://www.linkedin.com/in/vinicius-moura-5a4137327" target="_blank" class="hover:text-blue-200 transition duration-300">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica do menu hambúrguer
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (hamburgerButton && navMenu) {
+                hamburgerButton.addEventListener('click', function() {
+                    navMenu.classList.toggle('open');
+                });
+            }
+
+            // Fechar o menu ao clicar em um link (mobile)
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('open')) {
+                        navMenu.classList.remove('open');
+                    }
+                });
+            });
+
+            // Lógica para carregar projetos do GitHub
+            const githubUsername = 'Viniciusmbbr'; // Nome de usuário do GitHub
+            const githubProjectsContainer = document.getElementById('github-projects-container');
+            const githubProfileLink = document.getElementById('github-profile-link');
+
+            if (githubUsername && githubProjectsContainer && githubProfileLink) {
+                // Atualiza o link "Ver Todos os Projetos no GitHub"
+                githubProfileLink.href = `https://github.com/${githubUsername}`;
+
+                fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Erro na API do GitHub: ${response.status} ${response.statusText}`);
+                        }
+                        return response.json();
+                    })
+                    .then(repos => {
+                        githubProjectsContainer.innerHTML = ''; // Limpa o "Carregando..."
+                        if (repos.length === 0) {
+                            githubProjectsContainer.innerHTML = '<p class="text-gray-300 col-span-full">Nenhum projeto encontrado no GitHub.</p>';
+                            return;
+                        }
+
+                        repos.forEach(repo => {
+                            const projectCard = `
+                                <div class="bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gray-700 overflow-hidden">
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold text-gray-100 mb-2">${repo.name}</h3>
+                                        <p class="text-gray-300 mb-4">${repo.description || 'Nenhuma descrição fornecida.'}</p>
+                                        <div class="flex items-center justify-between text-sm text-gray-400 mb-4">
+                                            ${repo.language ? `<span class="flex items-center"><i class="fas fa-code mr-2"></i> ${repo.language}</span>` : ''}
+                                            <span class="flex items-center"><i class="fas fa-star mr-2"></i> ${repo.stargazers_count}</span>
+                                        </div>
+                                        <a href="${repo.html_url}" target="_blank" class="text-blue-400 hover:text-blue-500 font-medium transition duration-300 flex items-center justify-center">
+                                            Ver Repositório <i class="fas fa-arrow-right ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            `;
+                            githubProjectsContainer.innerHTML += projectCard;
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Erro ao carregar projetos do GitHub:', error);
+                        githubProjectsContainer.innerHTML = '<p class="text-red-400 col-span-full">Erro ao carregar projetos. Verifique seu nome de usuário do GitHub e tente novamente.</p>';
+                    });
+            } else if (githubProjectsContainer) {
+                githubProjectsContainer.innerHTML = '<p class="text-red-400 col-span-full">Por favor, configure seu nome de usuário do GitHub no script.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
